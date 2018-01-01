@@ -22,17 +22,18 @@ source:
 build:
   # If this is a new build for the same version, increment the build number.
   number: 4
+  noarch: generic
 
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
 
-  skip: True  # [win]
-
 
 requirements:
   build:
+
+  host:
     - r-base
     - r-foreach >=1.2.0
     - r-iterators >=1.0.0
